@@ -57,7 +57,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyRecyclerViewHold
 
     @Override
     public int getItemCount() {
-        return postList.size();
+        if (postList==null)return 0;
+       else return postList.size();
     }
 
     public static class MyRecyclerViewHolder extends RecyclerView.ViewHolder {
